@@ -4,13 +4,23 @@ A curated library of reusable Arcade expressions for ArcGIS Online, ArcGIS Pro, 
 
 This repository focuses on expressions that are useful, reusable, and a little harder to write from scratch: related-record lookups, FeatureSet filtering, geometry logic, dashboard indicators, smart form calculations, attribute rules, and null-safe utilities.
 
+> **Status:** early. The library currently has one expression and a template for adding more. The category list below is the planned layout; folders are created as expressions are added.
+
 ## Why this exists
 
 Arcade is powerful, but many real-world workflows require more than a one-line expression. This library gives GIS users a searchable place to find advanced examples, learn patterns, and adapt expressions for their own maps and apps.
 
+## What's here now
+
+| Expression | Profile | Description |
+| --- | --- | --- |
+| [Related Record Count](expressions/related-records/related-record-count.md) | Popup | Count the related records (inspections, work orders, permits) for the current feature. |
+
 ## How to use this repo
 
-Browse the `expressions/` folder by workflow:
+Each expression is a Markdown file under `expressions/<category>/`. Open it, copy the code block into the Arcade editor for the matching profile, and replace the field, layer, and relationship names with your own.
+
+Planned categories:
 
 - `popups/` - formatted pop-ups, related records, summaries, and conditional display
 - `labels/` - advanced labels, multi-line labels, and fallback logic
@@ -28,7 +38,7 @@ Each expression includes:
 
 - Use case
 - Arcade profile
-- Required fields or layers
+- Required fields, layers, or relationships
 - Expression code
 - Example output
 - Notes and limitations
@@ -38,13 +48,10 @@ Each expression includes:
 
 Arcade expressions run in different profiles depending on where they are used. A function that works in a pop-up may not work in labeling, symbology, or attribute rules. Always check the listed profile before using an expression.
 
-See [`docs/arcade-profiles.md`](docs/arcade-profiles.md) for profile notes.
+See Esri's [Arcade profiles reference](https://developers.arcgis.com/arcade/profiles/) for what each profile supports.
 
-## Starter examples
+## Planned examples
 
-This repo currently includes examples for:
-
-- Related record counts
 - Related record summaries
 - Conditional pop-up sections
 - Null-safe labels
@@ -59,7 +66,12 @@ This repo currently includes examples for:
 
 ## Contributing
 
-Contributions are welcome. Please use [`templates/expression-template.md`](templates/expression-template.md) for new expressions and read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull request.
+Contributions are welcome:
+
+1. Copy [`templates/expression-template.md`](templates/expression-template.md) to `expressions/<category>/<short-name>.md`, using one of the categories above.
+2. Fill in every section. Use generic field and layer names rather than names from a real organization's schema.
+3. Add a row to the table under [What's here now](#whats-here-now).
+4. Open a pull request.
 
 ## Disclaimer
 
