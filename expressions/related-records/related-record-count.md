@@ -8,6 +8,10 @@ Display the number of related inspections, work orders, permits, or other child 
 
 Popup
 
+## Required fields, layers, or relationships
+
+- A relationship class between this layer and the related table (named `Inspections` in this example)
+
 ## Expression
 
 ```js
@@ -27,4 +31,4 @@ Replace `Inspections` with your relationship name.
 
 ## Tags
 
-arcade, related-records, popup, featureset
+`arcade`, `related-records`, `popup`, `featureset`
